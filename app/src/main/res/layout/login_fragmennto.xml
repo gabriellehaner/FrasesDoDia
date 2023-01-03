@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/RoxoPadrao"
+    tools:context=".LoginFragmennto">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="65dp"
+        android:src="@drawable/fraselogo"
+        app:layout_constraintBottom_toTopOf="@+id/campoemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/campoemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:ems="10"
+        android:background="@drawable/arredondar"
+        android:textColor="@color/RoxoPadrao"
+        android:textColorHint="@color/RoxoPadrao"
+        android:hint="Digite seu e-mail"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/camposenha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <EditText
+        android:id="@+id/camposenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="Digite sua senha"
+        android:background="@drawable/arredondar"
+        android:textColor="@color/RoxoPadrao"
+        android:textColorHint="@color/RoxoPadrao"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/botaofazerlogin"
+        app:layout_constraintStart_toStartOf="@+id/campoemail"
+        app:layout_constraintTop_toBottomOf="@+id/campoemail" />
+
+    <Button
+        android:id="@+id/botaofazerlogin"
+        style="@style/botaoredondo"
+        android:layout_width="160dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/arredondarbotao"
+        android:text="Login"
+        app:layout_constraintBottom_toTopOf="@+id/botaoesquecisenha"
+        app:layout_constraintEnd_toEndOf="@+id/botaoesquecisenha"
+        app:layout_constraintTop_toBottomOf="@+id/camposenha" />
+
+    <Button
+        android:id="@+id/botaoesquecisenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:text="Esqueci a senha"
+        android:background="@drawable/arredondarbotao"
+        style="@style/botaoredondo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaofazerlogin" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Faça Login para Continuar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/campoemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

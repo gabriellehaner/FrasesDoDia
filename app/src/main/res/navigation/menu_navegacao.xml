@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_navegacao"
+    app:startDestination="@id/inicioFragmento">
+
+    <fragment
+        android:id="@+id/inicioFragmento"
+        android:name="com.example.frasesdodia.InicioFragmento"
+        android:label="InicioFragmento"
+        tools:layout="@layout/inicio_fragmento">
+        <action
+            android:id="@+id/inicioFragmentoparaloginFragmento"
+            app:destination="@id/loginFragmennto" />
+        <action
+            android:id="@+id/inicioFragmentoparacadastroFragmento"
+            app:destination="@id/cadastroFragmento" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragmennto"
+        android:name="com.example.frasesdodia.LoginFragmennto"
+        android:label="login_fragmennto"
+        tools:layout="@layout/login_fragmennto" >
+        <action
+            android:id="@+id/loginFragmentoparahomeFragmento"
+            app:destination="@id/homeFragmento" />
+        <action
+            android:id="@+id/loginFragmentoparaesqueciFragmento"
+            app:destination="@id/esqueciFragmento" />
+    </fragment>
+    <fragment
+        android:id="@+id/esqueciFragmento"
+        android:name="com.example.frasesdodia.EsqueciFragmento"
+        android:label="esqueci_fragmento"
+        tools:layout="@layout/esqueci_fragmento" >
+        <action
+            android:id="@+id/esqueciFragmentoparaloginFragmennto"
+            app:destination="@id/loginFragmennto" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroFragmento"
+        android:name="com.example.frasesdodia.CadastroFragmento"
+        android:label="cadastro_fragmento"
+        tools:layout="@layout/cadastro_fragmento" >
+        <action
+            android:id="@+id/cadastroFragmentoparaloginFragmennto"
+            app:destination="@id/loginFragmennto" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragmento"
+        android:name="com.example.frasesdodia.HomeFragmento"
+        android:label="home_fragmento"
+        tools:layout="@layout/home_fragmento" >
+        <action
+            android:id="@+id/homeFragmentoparainicioFragmento"
+            app:destination="@id/inicioFragmento" />
+    </fragment>
+</navigation>
