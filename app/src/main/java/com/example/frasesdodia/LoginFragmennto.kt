@@ -18,7 +18,7 @@ class LoginFragmennto : Fragment(R.layout.login_fragmennto) {
 
         view.findViewById<Button>(R.id.botaofazerlogin).setOnClickListener {
           //  findNavController().navigate(R.id.loginFragmentoparahomeFragmento)
-            login()
+            login(view)
         }
 
         view.findViewById<Button>(R.id.botaoesquecisenha).setOnClickListener {
@@ -28,10 +28,11 @@ class LoginFragmennto : Fragment(R.layout.login_fragmennto) {
 
     }
 
-    private fun login() {
+    private fun login(view: View) {
 
-        val emailCorreto:  Boolean = DadosLogin.email == view?.findViewById<EditText>(R.id.campoemail)?.text.toString()
-        val senhaCorreta: Boolean = DadosLogin.senha == view?.findViewById<EditText>(R.id.camposenha)?.text.toString()
+        val emailCorreto: Boolean = DadosLogin.email == view.findViewById<EditText>(R.id.campoemail)?.text.toString()
+        val senhaCorreta: Boolean = DadosLogin.senha == view.findViewById<EditText>(R.id.camposenha)?.text.toString()
+
 
         if (emailCorreto && senhaCorreta) {
             findNavController().navigate(R.id.loginFragmentoparahomeFragmento)
